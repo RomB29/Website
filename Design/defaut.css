@@ -1,0 +1,233 @@
+/*
+# = ID
+. = class
+La sélection par la balise
+p {}
+
+La multi-sélection
+h1, em { } 
+
+La sélection par la classe
+.class { } 
+
+La sélection par l'ID
+#id { } 
+
+Le sélecteur universel (toutes les balises)
+* { } 
+
+La balise B contenue dans A
+A B { } 
+
+La balise a qui a un attribut title
+a[title] { } 
+
+La balise a qui a un attribut title qui a un valeur "Accueil"
+a[title="Accueil"] { } 
+
+La balise a qui a un attribut title dont le mot "Accueil" est en tout ou partie la valeur
+a[title*="Accueil"] { } 
+*/
+
+
+body {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(rgb(129, 106, 106));
+    border-bottom: 1px;
+    margin: 0;
+}
+header {
+    text-align: center;
+    background-color: #1d1d1d;
+    color: white;
+    padding-bottom: 30px;
+}
+
+section {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'theblacklist','arial';
+    margin-top: 0;
+    padding-top: 30px;
+}
+
+h1:active {
+    color: red;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    /*font-size: 1.5em;
+    width: 400px;
+    height: 40px;*/
+
+    word-wrap: break-word;
+}
+
+h3:before {
+    content: "< ";
+    color: grey;
+}
+
+
+h3 {
+    font-size: 1.5em;
+    text-transform: lowercase;
+}
+
+h3:after {
+    content: " >";
+    color: grey;
+}
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+a:focus {
+    color: red;
+}
+
+ul {
+    padding:0;
+}
+
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+li:hover {
+    font-weight: bold;
+}
+
+a[title="Contact"] {
+    display: block;
+
+}
+
+
+nav {
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 3px 1px -1px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    padding: 10px;
+    position: relative;
+}
+/*  POLICES   */
+@font-face {
+    background: #1d1d1d;
+    font-family: 'theblacklist';
+    text-align: center;
+    src: url("../src/theblacklist.ttf") format('truetype');
+}
+
+footer {
+    background: #1d1d1d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* Contact */
+
+#contact {
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#logo {
+    margin-top: 30px;
+    width: 50px;
+}
+
+#projet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+#picture-project img {
+    width: 90%;
+}
+/* CLASSES */
+.separator {
+    width: 100px;
+    height: 1px;
+    margin: 15px auto;
+    display: block;
+    background:  #999999;
+}
+
+.contener {
+    width: 80%;
+    margin: auto;
+}
+
+.projet {
+    width: 400px;
+    margin: 30px;
+    display: inline-block;
+    background-color: rgba(29, 18, 18, 0.815);
+    padding-bottom: 15px;
+    border: 0px black solid;
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    
+}
+
+.projet:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: 0.1s;
+}
+.projet img {
+    min-width: 400px;
+    height: 266px;
+}
+
+.projet span {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    display: block;
+}
+
+.picture {
+    min-width: 400px;
+    height: 266px;
+    overflow: hidden;
+    margin-bottom: 15px;
+
+}
+
+.projet .date-project {
+    font-size: 0.7em;
+}
+
+/* POLICES */
+@font-face {
+    font-family: 'theblacklist';
+    src: url(../src/theblacklist.ttf) format('truetype');
+}
+
+@media all and (max-width: 1000px) {
+    .projet {width: 100%; margin: auto;}
+    .projet img{width: 100%; min-width: auto; height: auto;}
+    .projet .picture {width: 100%; min-width: auto; height: auto;}
+    header h2 {width: 90% ;}
+}
